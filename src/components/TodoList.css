@@ -1,0 +1,31 @@
+/* TodoList.css */
+.todo-list-container {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.todo-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-list-header h2 {
+  margin: 0;
+}
+
+/* Custom styles for the buttons */
+.btn-outline-secondary {
+  color: #6c757d; /* Gray color for icons */
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.btn-outline-secondary:hover {
+  color: #000; /* Black color on hover */
+}
