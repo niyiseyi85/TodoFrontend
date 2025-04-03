@@ -52,11 +52,11 @@ const TodoList = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Remove token
-    localStorage.removeItem("userId"); // Remove user ID
-    localStorage.removeItem("userName"); // Remove user name
-    localStorage.removeItem("userEmail"); // Remove user email
-    navigate("/"); // Redirect to login page
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId"); 
+    localStorage.removeItem("userName"); 
+    localStorage.removeItem("userEmail"); 
+    navigate("/"); 
   };
 
   const handleDelete = async (id) => {
@@ -141,14 +141,14 @@ const TodoList = () => {
                   >
                     <Trash />
                   </Button>{" "}
-                  {!todo.isCompleted && (
+                  {/* {!todo.isCompleted && (
                     <Button
                       variant="outline-success"
                       onClick={() => handleMarkAsCompleted(todo.id)}
                     >
                       <CheckCircle /> Mark as Completed
                     </Button>
-                  )}
+                  )} */}
                 </td>
               </tr>
             ))}

@@ -3,19 +3,22 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button } 
 import api from "../services/api";
 
 const EditTodoDialog = ({ open, onClose, onSave, todo }) => {
+  const [id, setId] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  
 
   useEffect(() => {
     if (todo) {
+      setId(todo.id);
       setTitle(todo.title);
-      setDescription(todo.description);
+      setDescription(todo.description);      
     }
   }, [todo]);
 
   const handleSave = async () => {
     try {
-      await api.put(`/todos/${todo.id}`, { title, description });
+      await api.put(`/todos/${todo.id}`, {id, title, description });
       onSave();
       onClose();
     } catch (err) {
